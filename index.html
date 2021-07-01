@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snak-a-thon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="body">
+        <div id="board"></div>
+        <div id="sideboard">
+            <div class="name">Snak-a-thon</div>
+            <div class="scoring">Score: <span id="scoreboard">0</span></div>
+            <div class="hiscore">Highest Score: <span id="hiscoreboard">0</span></div>
+            <div class="theme">
+                Choose Theme: <br>
+                <div class="btns">
+                    <button id="redt" onclick="redtheme()"></button>
+                    <button id="bluet" onclick="bluetheme()"></button>
+                    <button id="greent" onclick="yellowtheme()"></button>
+                </div>
+            </div>
+            <div class="snakecolor">
+                Choose Snake Colour: <br>
+                <div class="btns">
+                    <button id="red" onclick="redsnake()"></button>
+                    <button id="blue" onclick="bluesnake()"></button>
+                    <button id="green" onclick="yellowsnake()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>

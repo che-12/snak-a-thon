@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+:root{
+    --snake-color:rgba(180, 77, 77);
+    --head-color: brown;
+    --back: rgba(196, 119, 95, 0.849);
+}
+.body{
+    height: 100vh;
+    width: 100%;
+    background: url('../static/bg1.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#board{
+    height: 90vmin;
+    width: 90vmin;
+    background: linear-gradient(var(--back),rgba(116, 113, 113, 0.849));
+    box-shadow: 5px 5px 15px rgb(0,0,0.8),
+    -5px -5px 15px rgb(0,0,0,0.8);
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+    grid-template-rows: repeat(24,1fr);
+}
+
+.head{
+    background-color: var(--head-color);
+    z-index: 100;
+}
+.snake{
+    background-color: var(--snake-color);
+    z-index: 100;
+}
+.food{
+    background-color: rgb(0, 109, 0);
+    border-radius: 50%;
+    z-index: 1;
+    margin: 2px;
+}
+
+#sideboard{
+    height: 90vmin;
+    width: 40vmin;
+    background: linear-gradient(var(--back),rgba(116, 113, 113, 0.849));
+    box-shadow: 5px 5px 15px rgb(0,0,0.8),
+    -5px -5px 15px rgb(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Righteous', cursive;
+    gap: 2rem;
+}
+
+#sideboard .name{
+    font-size: 2.5rem;
+}
+#sideboard .scoring,#sideboard .hiscore,#sideboard .theme,#sideboard .snakecolor{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#sideboard .scoring #scoreboard{
+    display: block;
+    text-align: center;
+    font-size: 5rem;
+}
+
+button{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: all 0.5s ease-in-out;
+    margin: 10px 0px;
+}
+button:hover{
+    transform: scale(1.5);
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+}
+#blue, #bluet{
+    background-color: rgb(83, 89, 150);
+}
+#red, #redt{
+    background-color: rgba(180, 77, 77) ;
+}
+#green, #greent{
+    background-color: rgb(209, 170, 63);
+}
